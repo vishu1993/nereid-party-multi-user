@@ -1,11 +1,21 @@
 Nereid Party Multi User
 =======================
 
-[![Build Status](https://travis-ci.org/openlabs/nereid-party-multi-user.svg?branch=develop)](https://travis-ci.org/openlabs/nereid-party-multi-user)
-[![Downloads](https://pypip.in/download/trytond_nereid-party-multi-user/badge.svg)](https://pypi.python.org/pypi/trytond_nereid-party-multi-user/)
-[![Latest Version](https://pypip.in/version/trytond_nereid-party-multi-user/badge.svg)](https://pypi.python.org/pypi/trytond_nereid-party-multi-user/)
-[![Development Status](https://pypip.in/status/trytond_nereid-party-multi-user/badge.svg)](https://pypi.python.org/pypi/trytond_nereid-party-multi-user/)
-[![Coverage Status](https://coveralls.io/repos/openlabs/nereid-party-multi-user/badge.svg?branch=develop)](https://coveralls.io/r/openlabs/nereid-party-multi-user?branch=develop)
+.. image:: https://travis-ci.org/openlabs/nereid-party-multi-user.png?branch=develop
+  :target: https://travis-ci.org/openlabs/nereid-party-multi-user
+  :alt: Build Status
+.. image:: https://pypip.in/download/trytond_nereid-party-multi-user/badge.svg
+    :target: https://pypi.python.org/pypi/trytond_nereid-party-multi-user/
+    :alt: Downloads
+.. image:: https://pypip.in/version/trytond_nereid-party-multi-user/badge.svg
+    :target: https://pypi.python.org/pypi/trytond_nereid-party-multi-user/
+    :alt: Latest Version
+.. image:: https://pypip.in/status/trytond_nereid-party-multi-user/badge.svg
+    :target: https://pypi.python.org/pypi/trytond_nereid-party-multi-user/
+    :alt: Development Status
+.. image:: https://coveralls.io/repos/openlabs/nereid-party-multi-user/badge.svg?branch=develop 
+    :target: https://coveralls.io/r/openlabs/nereid-party-multi-user?branch=develop 
+    :alt: Coveralls
 
 Introduction
 ------------
@@ -55,7 +65,7 @@ might want to follow the migration path explained below:
 To migrate the existing m2o/o2m relationship between party and nereid user
 --------------------------------------------------------------------------
 
-SQL:
+SQL::
 
     INSERT INTO "nereid_user-party_party" (nereid_user, party) (
         SELECT  id AS nereid_user, party FROM nereid_user
@@ -64,7 +74,7 @@ SQL:
 To migrate the name of the `party` as the `display_name`
 --------------------------------------------------------
 
-SQL:
+SQL::
 
     UPDATE nereid_user
         SET display_name = party.name
